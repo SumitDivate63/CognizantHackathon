@@ -49,7 +49,6 @@ export default function RightPanel({ isProcessing, processingStep, results }) {
               {agents.map((agent) => {
                 const isCompleted = processingStep > agent.id;
                 const isCurrent = processingStep === agent.id || (processingStep === 0 && agent.id === 1 && isProcessing);
-                const isPending = processingStep < agent.id && !(processingStep === 0 && agent.id === 1);
 
                 return (
                   <div key={agent.id} className="flex gap-4 mb-6 last:mb-0 items-start">
